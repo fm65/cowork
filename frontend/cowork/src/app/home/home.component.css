@@ -1,0 +1,12 @@
+.bg {
+    background-image: url('https://vectr.com/fm65/arAFimRfK.svg?width=680&height=455&select=arAFimRfKpage0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    font-weight: bold;
+}
+
+.bg h1, .bg h2, .bg p {
+    background-color: rgba(0, 0, 0, 0.4);
+}

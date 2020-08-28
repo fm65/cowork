@@ -1,0 +1,77 @@
+<div *ngIf="user" class="container emp-profile">
+    <div class="row">
+        <div class="col-md-12" style="padding-left: 0; padding-right: 0;">
+            <div class="profile-head">
+                <h5>
+                    {{user.firstName}} {{user.lastName}}
+                </h5>
+
+                <tabs>
+                    <tab tabTitle="Infos">
+                        <div class="col-md-8">
+                            <div class="tab-content profile-tab" id="myTabContent">
+                                <div aria-labelledby="home-tab" class="tab-pane fade show active" role="tabpanel">
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{user.email}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Nom de famille</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{user.lastName}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Prénom</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{user.firstName}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab tabTitle="Facturation">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Prise</th>
+                                    <th>Début</th>
+                                    <th>Fin</th>
+                                    <th>Pers.</th>
+                                    <th>Détail</th>
+                                </tr>
+                                </thead>
+                                <tbody id="items">
+                                <tr *ngFor="let reservation of reservations"
+                                    routerLink="/reservations/{{reservation.id}}/invoice">
+                                    <td>{{displayDate(reservation.orderDate)}}</td>
+                                    <td>{{displayDate(reservation.startDate)}}</td>
+                                    <td>{{displayDate(reservation.endDate)}}</td>
+                                    <td>{{reservation.peopleNumber}}</td>
+                                    <td>
+                                        <button class="btn btn-primary">Consulter</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <p *ngIf="reservations?.length == 0">Vous n'avez pas encore effectué de réservation</p>
+                    </tab>
+                </tabs>
+            </div>
+        </div>
+    </div>
+</div>
