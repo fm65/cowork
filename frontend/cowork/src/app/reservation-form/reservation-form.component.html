@@ -1,0 +1,121 @@
+<!--   Big container   -->
+<div *ngIf="hasSucceeded" class="alert alert-success" role="alert">
+    Merci pour votre réservation.
+</div>
+<div *ngIf="hasErrored" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <button type="button" class="close" aria-label="Close" (click)="hasErrored = false;">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Uh, Oh! Quelqu'un chose s'est mal passé.</strong> Réessayez ou contactez notre support.
+</div>
+<div *ngIf="space && !hasSucceeded" class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Wizard container -->
+                <div class="card wizard-card" data-color="red" id="wizard">
+                    <!--Formulaire-->
+                    <form action="" method="">
+
+                        <div>
+                            <h3 class="info-text" style="color: darkblue;">{{space.name}}</h3>
+                            <h4 class="info-text" style="color: #9c27b0;">{{space.type}}</h4>
+                        </div>
+
+                        <div class="tab-content">
+
+                            <!--NgModel: va reprendre la valeur des input et l'afficher dans les données dynamiques-->
+
+                            <div>
+
+                                <!--todo: format date et valeurs par défaut date début (date du jour) et date de fin (1 mois plus tard)-->
+
+                                <span class="form-label">Date de début</span>
+                                <input [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}"
+                                       class="form-control "
+                                       required type="date" useValueAsDate>
+
+                                <span class="form-label">Date de fin</span>
+                                <input [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}" class="form-control"
+                                       required type="date" useValueAsDate>
+
+                                <span class="form-label">Nombre de personnes</span>
+                                <div>
+                                    <input [(ngModel)]="peopleNumber" [max]="space.peopleCapacity"
+                                           [ngModelOptions]="{standalone: true}" class="form-control"
+                                           max={{space.peopleCapacity}}
+                                           min="1" required type="number">
+                                </div>
+
+                                <br><span class="form-label"
+                                          style="color: darkblue;">Prix par jour : {{space.price}}
+                                €</span>
+                                <br><span
+                                class="form-label">{{invoiceService.calculateBusinessDays(startDate, endDate)}} jours ouvrables</span>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card" style="margin:50px 0">
+
+                                                <div class="card-header">Equipements en option <p>€ / unité / jour</p>
+                                                </div>
+
+                                                <ul class="list-group list-group-flush">
+                                                    <li *ngFor="let equipment of space.equipmentTypes"
+                                                        class="list-group-item">
+                                                        <input (ngModelChange)="updateEquipmentOrder(equipment, $event)"
+                                                               [ngModelOptions]="{standalone: true}"
+                                                               [max]="peopleNumber" min="0" ngModel="0"
+                                                               type="number">
+                                                        &nbsp; {{equipment.name}}
+                                                        - {{equipment.price}} €
+
+                                                    </li>
+                                                    <li *ngIf="space.equipmentTypes.length === 0">
+                                                        Pas d'équipement disponible pour cet espace.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card" style="margin:50px 0">
+
+                                                <!-- Default panel contents -->
+                                                <div class="card-header">Services en option <p>€ / pers. / jour</p>
+                                                </div>
+
+                                                <ul class="list-group list-group-flush">
+                                                    <li *ngFor="let serviceType of space.building.serviceTypes"
+                                                        class="list-group-item">
+                                                        {{serviceType.name}} <span> - {{serviceType.price}} €</span>
+                                                        <label class="switch">
+                                                            <input (click)="updateServiceOrder(serviceType)"
+                                                                   class="default"
+                                                                   type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </li>
+                                                    <li *ngIf="space.building.serviceTypes.length === 0">
+                                                        Pas de service disponible pour cet espace.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <span class="form-label"
+                                                  style="float:right;">TOTAL (HTVA) : {{invoiceService.quotationTotalPriceHTVA(buildReservation())}}
+                                                €</span><br><br>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <button class="btn btn-info" routerLink="/spaces" style="float:left;">Espaces</button>
+                                <button (click)="submitReservation()" class="btn btn-primary" style="float:right;">
+                                    Réserver
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div> <!-- row -->
+</div> <!--  big container -->
+<!--  big container -->
