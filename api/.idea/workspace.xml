@@ -2,10 +2,211 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8863a2a-0071-4407-b9fc-b2a9f5951d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/jwt.utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/tsconfig.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/building.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/city.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/image.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/fonts/Roboto/Roboto-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/invoice.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/invoice.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/invoice/invoice.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/jwt-interceptor.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/login/login.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/menu/menu.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/menu/menu.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/menu/menu.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/building.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/city.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/equipmentOrder.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/equipmentType.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/makeReservationModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/orderedEquipment.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/orderedService.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/reservation.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/serviceOrder.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/serviceType.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/space.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/models/user.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/profile/profile.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/profile/profile.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/profile/profile.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/register/register.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/register/register.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/register/register.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/reservation-form/reservation-form.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/reservation-form/reservation-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/reservation-form/reservation-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/reservation.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/space-detail/space-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/space-detail/space-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/space-detail/space-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/space.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/spaces-list/spaces-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/spaces-list/spaces-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/spaces-list/spaces-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/app/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/enterprise.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/docker/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/docker/mysql/my-custom.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/docker/mysql/script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/CoworkingApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/CoworkingProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/BuildingResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/CityResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/EquipmentTypeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/ImageResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/ReservationResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/ServiceTypeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/SpaceResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/resource/UserResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/util/HeaderUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/api/util/ResponseUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/Authority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/Building.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/EquipmentOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/EquipmentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/ServiceOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/ServiceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/Space.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/domain/enumeration/SpaceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/CredentialsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/EquipmentOrderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/MakeReservationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/RegistrationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/ServiceOrderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/AuthorityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/BuildingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/CityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/EquipmentTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/ReservationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/ServiceTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/SpaceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/AuthoritiesConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/DomainUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/SecurityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/WebConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/jwt/JWTConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/jwt/JWTFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/security/jwt/TokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/ConditionOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/ReservationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/SpaceCriterion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/SpaceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/SpaceSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/SpaceSpecificationBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/java/com/ifosup/coworking/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/config/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/main/resources/public/images/coworking-spaces/bremen-coworking-lounge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/test/java/com/ifosup/coworking/CoworkingApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cowork/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/e2e/protractor.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/e2e/src/app.po.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +242,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598604719133</updated>
-      <workItem from="1598604720266" duration="2627000" />
+      <workItem from="1598604720266" duration="5845000" />
     </task>
     <servers />
   </component>
