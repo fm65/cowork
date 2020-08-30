@@ -20,6 +20,16 @@ class RoomController{
             }
         });
     }
+
+    static async getARoomFromABuilding(name, buildingId) {
+        return Room.findOne({
+            where: {
+                BuildingId : buildingId,
+                name: name
+            }
+        });
+    }
+
     
 }
 module.exports = RoomController;
