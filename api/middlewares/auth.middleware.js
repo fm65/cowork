@@ -1,3 +1,5 @@
+const AuthController = require('../controllers').authController;
+
 class AuthMiddleware {
     static auth() {
         return async (req, res, next) => {
