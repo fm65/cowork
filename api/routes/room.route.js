@@ -3,7 +3,7 @@ const RoomController = require('../controllers').RoomController;
 
 module.exports = function(app) {
 
-    app.post('/room/new', bodyParser.json(), async (req, res) => {
+    app.post('/api/rooms', bodyParser.json(), async (req, res) => {
         if (req.body.content) {
             
             try {
@@ -17,7 +17,7 @@ module.exports = function(app) {
         }
     });
 
-    app.get('/rooms', async (req, res) => {
+    app.get('/api/rooms', async (req, res) => {
         const rooms = await RoomController.allRoomsByBuildingId(req.body.content);
         res.status(200).json(rooms);
     });

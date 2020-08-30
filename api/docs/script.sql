@@ -1,6 +1,6 @@
 -- ADMIN CREDENTIAL
 INSERT INTO Users (email, password, firstName, lastName, isAdmin)
-VALUES ('admin@localhost', '$2y$10$bB4KADD/Vtp3eIwhzRHsUO0g2rPRjibglxf9lC4mwlmpjxik5uEKy', 'Admin', 'System', 1);
+VALUES ('admin@localhost', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'Admin', 'System', 1);
 
 -- SUBSCRIPTIONS
 INSERT INTO Subscriptions (id, name, firstHourPrice, nextHalfHourPrice, fiveHoursPrice, monthPrice, eightMonthPrice, yearPrice) VALUES

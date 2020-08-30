@@ -4,8 +4,16 @@ const SecurityUtils = require('../utils').securityUtils
 
 module.exports = {
 
-    allUsers: () => {
+    allUsers: async () => {
         return User.findAll();
+    },
+
+    getAUser: async (id) => {
+        return await User.findOne({
+            where: {
+                id
+            }
+        });
     }
 
 }
