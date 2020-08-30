@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8863a2a-0071-4407-b9fc-b2a9f5951d81" name="Default Changelist" comment="">
+
+      <change afterPath="$PROJECT_DIR$/controllers/building.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/room.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/building.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/room.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+
+>>>>>>> 7d863dc2cd492c97d43898496f857b968dae9764
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

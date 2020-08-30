@@ -1,5 +1,7 @@
 module.exports = {
     authController: require('./auth.controller'),
     userController: require('./user.controller'),
-    roomController: require('./room.controller'),
+    buildingController: require('./building.controller'),
+    roomController: require('./room.controller')
+
 }
