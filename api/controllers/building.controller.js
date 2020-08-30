@@ -10,8 +10,10 @@ module.exports = {
 
     getABuilding: async (name) => {
         return await Building.findOne({
-            where: name
-        })
+            where: {
+                name
+            }
+        });
     }
 
 }

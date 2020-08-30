@@ -6,9 +6,9 @@ const authMiddleware = require('../middlewares').authMiddleware;
 module.exports = function(app) {
 
     app.post("/api/auth/signup", async (req, res) => {
-        if (req.body.email && req.body.password && req.body.firstName && req.body.lastName) {
+        if (req.body.email && req.body.password && req.body.firstName && req.body.lastName && req.body.buildingName) {
             try {
-                const user = await authController.signup(req.body.email, req.body.password, req.body.firstName, req.body.lastName);
+                const user = await authController.signup(req.body.email, req.body.password, req.body.firstName, req.body.lastName, req.body.buildingName);
                 res.status(201).json(user);
             }
             catch (err) {
