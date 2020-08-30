@@ -1,17 +1,25 @@
 const models   = require('../models');
 const Building = models.Building;
-const SecurityUtils = require('../utils').securityUtils
 
-module.exports = {
 
-    allBuildings: () => {
+class BuildingController {
+
+    static async allBuildings() {
         return Building.findAll();
-    },
+    }
 
-    getABuilding: async (name) => {
+    static async getABuilding(name) {
         return await Building.findOne({
-            where: name
-        })
+            where: {
+                name
+            }
+        });
+    }
+
+    static async getBuildingId(name){
+        const building = await this.getABuilding(name);
+        return building.id;
     }
 
 }
+module.exports = BuildingController;

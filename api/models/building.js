@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const Building = sequelize.define('Building', {
-        name: DataTypes.STRING,
+        name: {type: DataTypes.STRING, unique: true},
         scheduleMonThu: DataTypes.STRING,
         scheduleFri: DataTypes.STRING,
         scheduleWeekend: DataTypes.STRING,

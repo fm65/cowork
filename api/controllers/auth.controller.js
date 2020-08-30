@@ -1,19 +1,22 @@
 const models   = require('../models');
 const User = models.User;
 const Session = models.Session;
-const SecurityUtils = require('../utils').securityUtils
-
-const Op = models.Sequelize.Op;
+const Building = models.Building;
+const BuildingController = require('./building.controller');
+const SubscriptionController = require('./subscription.controller');
+const SecurityUtils = require('../utils').securityUtils;
 
 module.exports = {
 
-    signup: async (email, password, firstName, lastName) => {
+    signup: async (email, password, firstName, lastName, buildingName) => {
         const user = await User.findOne({
             attributes: ['email'],
             where: {email: email}
         });
+        const building = await BuildingController.getABuilding(buildingName);
+        const subscription = await SubscriptionController.getASubscription(1);
         if (!user) {
-            return User.create({
+            const newUser = await User.create({
                 email: email,
                 password: SecurityUtils.hashPassword(password),
                 firstName: firstName,
@@ -21,6 +24,9 @@ module.exports = {
                 isAdmin: false,
                 registrationDate: Date.now()
             });
+            newUser.setBuilding(building);
+            newUser.setSubscription(subscription);
+            return newUser;
         }
     },
 
