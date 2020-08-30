@@ -8,7 +8,7 @@ module.exports = function(app) {
         res.status(200).json(buildings);
     });
 
-    app.get('/api/buildings', async (req, res) => {
+    app.get('/api/building', async (req, res) => {
         if (req.body.name) {
             try {
                 const building = await buildingController.getABuilding(req.body.name);
@@ -20,6 +20,25 @@ module.exports = function(app) {
             }
             catch (err) {
                 res.status(500).end();      // Server crashed
+            }
+        } else {
+            res.status(400).end();          //
+        }
+    });
+
+    app.get('/api/buildings/id', async (req, res) => {
+        if (req.body.name) {
+            try {
+                const id = await buildingController.getBuildingId(req.body.name);
+                console.log(id);
+                if (id) {
+                    res.status(201).json(id);
+                } else {
+                    res.status(401).end();  // Unautorized
+                }
+            }
+            catch (err) {
+                res.status(500).json(err.toString());      // Server crashed
             }
         } else {
             res.status(400).end();          //

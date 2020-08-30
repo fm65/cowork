@@ -3,6 +3,7 @@ module.exports = {
     userController: require('./user.controller'),
     buildingController: require('./building.controller'),
     roomController: require('./room.controller'),
-    subscriptionController: require('./subscription.controller')
+    subscriptionController: require('./subscription.controller'),
+    reservationController: require('./reservation.controller')
 
 }

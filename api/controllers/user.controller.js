@@ -8,7 +8,15 @@ module.exports = {
         return User.findAll();
     },
 
-    getAUser: async (id) => {
+    getUserWithEmail: async (email) => {
+        return await User.findOne({
+            where: {
+                email
+            }
+        });
+    },
+
+    getUserWithId: async (id) => {
         return await User.findOne({
             where: {
                 id

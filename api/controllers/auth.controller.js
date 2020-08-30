@@ -2,11 +2,9 @@ const models   = require('../models');
 const User = models.User;
 const Session = models.Session;
 const Building = models.Building;
-const BuildingController = require('./building.controller')
-const SecurityUtils = require('../utils').securityUtils
-
-
-const Op = models.Sequelize.Op;
+const BuildingController = require('./building.controller');
+const SubscriptionController = require('./subscription.controller');
+const SecurityUtils = require('../utils').securityUtils;
 
 module.exports = {
 
@@ -16,6 +14,7 @@ module.exports = {
             where: {email: email}
         });
         const building = await BuildingController.getABuilding(buildingName);
+        const subscription = await SubscriptionController.getASubscription(1);
         if (!user) {
             const newUser = await User.create({
                 email: email,
@@ -26,6 +25,7 @@ module.exports = {
                 registrationDate: Date.now()
             });
             newUser.setBuilding(building);
+            newUser.setSubscription(subscription);
             return newUser;
         }
     },

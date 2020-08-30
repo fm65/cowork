@@ -21,4 +21,22 @@ module.exports = function(app) {
         const rooms = await RoomController.allRoomsByBuildingId(req.body.content);
         res.status(200).json(rooms);
     });
+
+    app.get('/api/room', async (req, res) => {
+        if (req.body.name && req.body.buildingId) {
+            try {
+                const room = await RoomController.getARoomFromABuilding(req.body.name, req.body.buildingId);
+                if (room) {
+                    res.status(201).json(room);
+                } else {
+                    res.status(401).end();  // Unautorized
+                }
+            }
+            catch (err) {
+                res.status(500).json(err.toString());      // Server crashed
+            }
+        } else {
+            res.status(400).end();
+        }
+    });
 }
