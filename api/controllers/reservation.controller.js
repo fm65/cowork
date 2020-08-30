@@ -34,7 +34,24 @@ module.exports = {
                 RoomId: roomId
             }
         });
+    },
+
+    getReservationsByUser: async (userId) => {
+        return await Reservation.findAll({
+            where: {
+                UserId: userId
+            }
+        });
+    },
+
+    getReservationById: async (id) => {
+        return await Reservation.findOne({
+            where: {
+                id
+            }
+        });
     }
+
     /*
     getAvailableRooms: async (dateDebut, dateEnd) => {
         return await Reservation.findAll({

@@ -3,12 +3,14 @@ const buildingController = require('../controllers').buildingController;
 
 module.exports = function(app) {
 
+    // Get all buildings list
     app.get("/api/buildings", async (req, res) => {
         const buildings = await buildingController.allBuildings();
         res.status(200).json(buildings);
     });
 
-    app.get('/api/building', async (req, res) => {
+    // Get a building
+    app.get('/api/buildings', async (req, res) => {
         if (req.body.name) {
             try {
                 const building = await buildingController.getABuilding(req.body.name);
@@ -26,6 +28,7 @@ module.exports = function(app) {
         }
     });
 
+    // Get the id of a building from its name
     app.get('/api/buildings/id', async (req, res) => {
         if (req.body.name) {
             try {

@@ -47,13 +47,13 @@ module.exports = function(app) {
         }
     });
 
-    app.get('/api/reservation', async (req, res) => {
-        if (req.body.name) {
+    // Get all reservations of a user
+    app.get('/api/users/reservations', async (req, res) => {
+        if (req.body.userId) {
             try {
-                const id = await buildingController.getBuildingId(req.body.name);
-                console.log(id);
-                if (id) {
-                    res.status(201).json(id);
+                const reservations = await ReservationController.getReservationsByUser(req.body.userId);
+                if (reservations) {
+                    res.status(201).json(reservations);
                 } else {
                     res.status(401).end();  // Unautorized
                 }
@@ -62,7 +62,26 @@ module.exports = function(app) {
                 res.status(500).json(err.toString());      // Server crashed
             }
         } else {
-            res.status(400).end();          //
+            res.status(400).end();
+        }
+    });
+
+    // Get a reservation by its ID
+    app.get('/api/reservations/:id', async (req, res) => {
+        if (req.params) {
+            try {
+                const reservations = await ReservationController.getReservationById(req.params.id);
+                if (reservations) {
+                    res.status(201).json(reservations);
+                } else {
+                    res.status(401).end();  // Unautorized
+                }
+            }
+            catch (err) {
+                res.status(500).json(err.toString());      // Server crashed
+            }
+        } else {
+            res.status(400).end();
         }
     });
 

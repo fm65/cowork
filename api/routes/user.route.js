@@ -11,7 +11,7 @@ module.exports = function(app) {
     });
 
     // Get user with email
-    app.get('/api/user', async (req, res) => {
+    app.get('/api/users', async (req, res) => {
         if (req.body.email) {
             try {
                 const user = await userController.getUserWithEmail(req.body.email);

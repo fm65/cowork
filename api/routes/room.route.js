@@ -25,7 +25,7 @@ module.exports = function(app) {
     });
 
     // Get a specific room from a building
-    app.get('/api/room', async (req, res) => {
+    app.get('/api/rooms', async (req, res) => {
         if (req.body.name && req.body.buildingId) {
             try {
                 const room = await RoomController.getARoomFromABuilding(req.body.name, req.body.buildingId);
