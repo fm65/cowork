@@ -3,11 +3,12 @@ const RoomController = require('../controllers').RoomController;
 
 module.exports = function(app) {
 
+    // Add new room
     app.post('/api/rooms', bodyParser.json(), async (req, res) => {
         if (req.body.content) {
             
             try {
-                const room = await RoomController.addNewRoom(req.body.content);
+                const room = await RoomController.addNewRoom(req.body.name, req.body.type, req.body.buildingId);
                 res.status(201).json(room);
             } catch (err) {
                 res.status(409).end();
@@ -17,11 +18,13 @@ module.exports = function(app) {
         }
     });
 
+    // Get all rooms by building ID
     app.get('/api/rooms', async (req, res) => {
         const rooms = await RoomController.allRoomsByBuildingId(req.body.content);
         res.status(200).json(rooms);
     });
 
+    // Get a specific room from a building
     app.get('/api/room', async (req, res) => {
         if (req.body.name && req.body.buildingId) {
             try {

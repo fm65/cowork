@@ -3,6 +3,7 @@ const ReservationController = require('../controllers').reservationController;
 
 module.exports = function(app) {
 
+    // Make a reservation of a room of a building for a user
     app.post('/api/reservations', async (req, res) => {
         if (req.body.startDate && req.body.endDate && req.body.participants && req.body.totalPrice
             && req.body.userEmail && req.body.roomName && req.body.buildingName) {
@@ -21,11 +22,13 @@ module.exports = function(app) {
         }
     });
 
+    // Get all reservations
     app.get("/api/reservations", async (req, res) => {
         const reservations = await ReservationController.allReservations();
         res.status(200).json(reservations);
     });
 
+    // Get all reservations of a room
     app.get('/api/rooms/reservations', async (req, res) => {
         if (req.body.roomId) {
             try {

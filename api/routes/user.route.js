@@ -4,11 +4,13 @@ const authMiddleware = require('../middlewares').authMiddleware;
 
 module.exports = function(app) {
 
+    // Get all users
     app.get("/api/users", async (req, res) => {
         const users = await userController.allUsers();
         res.status(200).json(users);
     });
 
+    // Get user with email
     app.get('/api/user', async (req, res) => {
         if (req.body.email) {
             try {
@@ -27,6 +29,7 @@ module.exports = function(app) {
         }
     });
 
+    // Get user with id
     app.get('/api/users/:id', async (req, res) => {
         if (req.params) {
             try {
