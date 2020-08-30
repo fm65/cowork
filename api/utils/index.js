@@ -1,3 +1,4 @@
 module.exports = {
-    jwtUtils: require('./jwt.util')
+    jwtUtils: require('./jwt.util'),
+    securityUtils: require('./security.util')
 };

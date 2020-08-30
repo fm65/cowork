@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         email: DataTypes.STRING,
         password: DataTypes.STRING,
-        firstname: DataTypes.STRING,
-        lastname: DataTypes.STRING,
+        firstName: DataTypes.STRING,
+        lastName: DataTypes.STRING,
         isAdmin: DataTypes.BOOLEAN,
         registrationDate: DataTypes.DATE,
         subscriptionDate: DataTypes.DATE
@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         User.belongsTo(models.Subscription);
         User.belongsTo(models.Building);
         User.hasOne(models.Reservation);
+        User.hasOne(models.Session);
     };
     return User;
 };
