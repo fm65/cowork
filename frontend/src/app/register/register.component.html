@@ -30,20 +30,23 @@
                 <div *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')" id="login-warning"><strong>L'email est
                     obligatoire </strong></div>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="building-filter">Batiment</label>
-                <select class="form-control" id="building-filter" name="space-type">
-                    <option [value]="null" selected>Tous</option>
-                    <option *ngFor="let building of buildings | async" [value]="building.id">{{building.name}}
-                        - {{building.city.name}} {{building.city.zipCode}}, {{building.address}}</option>
+                <select class="form-control" id="building-filter" formControlName="buildingId">
+                    <option [value]="null" selected>Sélectionner un batiment</option>
+                    <option *ngFor="let building of buildings | async" [value]="building.id">{{building.name}}</option>
                 </select>
+                <div *ngIf="buildingCtrl.dirty && buildingCtrl.hasError('required')" id="building-warning"><strong>
+                    Veuillez sélectionner un batiment</strong></div>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="building-filter">Abonnement</label>
-                <select class="form-control" id="subscription-filter" name="space-type">
-                    <option [value]="null" selected>Tous</option>
-
+                <select class="form-control" id="subscription-filter" formControlName="subscriptionId">
+                    <option [value]="null" selected>Sélectionner un abonnement</option>
+                    <option *ngFor="let sub of subscriptions | async" [value]="sub.id">{{sub.name}}</option>
                 </select>
+                <div *ngIf="subscriptionCtrl.dirty && subscriptionCtrl.hasError('required')" id="sub-warning"><strong>
+                    Veuillez sélectionner un abonnement</strong></div>
             </div>
 
 
@@ -67,12 +70,6 @@
 
                 <div class="error-message"  id="password-matching-error" *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')">
                     <strong>Vos mots de passe ne correspondent pas</strong></div>
-            </div>
-
-            <div class="form-check">
-                <input id="rememberMe" class="form-check-input" type="checkbox" name="rememberMe"
-                       formControlName="rememberMe">
-                <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
             </div>
 
             <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Inscription</button>
