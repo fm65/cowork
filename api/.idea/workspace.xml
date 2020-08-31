@@ -6,10 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="a8863a2a-0071-4407-b9fc-b2a9f5951d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/building.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/building.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/city.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/city.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/image.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/image.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/invoice.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/invoice.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/invoice/invoice.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/invoice/invoice.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/jwt-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/jwt-interceptor.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/reservation-form/reservation-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/reservation-form/reservation-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/reservation.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/space-detail/space-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/space-detail/space-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/space.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/space.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/spaces-list/spaces-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/spaces-list/spaces-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/old/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

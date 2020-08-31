@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
-import { ReservationModel } from "./models/reservation.model";
-import { OrderedEquipmentModel } from "./models/orderedEquipment.model";
-import { OrderedServiceModel } from "./models/orderedService.model";
-import { MakeReservationModel } from "./models/makeReservationModel";
+import { ReservationModel } from "../models/reservation.model";
+import { OrderedEquipmentModel } from "../models/orderedEquipment.model";
+import { OrderedServiceModel } from "../models/orderedService.model";
+import { MakeReservationModel } from "../models/makeReservationModel";
 
 @Injectable({
     providedIn: 'root'

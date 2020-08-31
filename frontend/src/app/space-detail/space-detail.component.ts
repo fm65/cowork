@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SpaceService } from '../space.service';
+import { SpaceService } from '../old/space.service';
 import { SpaceModel } from '../models/space.model';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../user.service';
-import { ImageService } from '../image.service';
+import { UserService } from '../old/user.service';
+import { ImageService } from '../old/image.service';
 
 @Component({
     selector: 'cow-space-detail',

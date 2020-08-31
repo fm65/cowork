@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { SpaceService } from "../space.service";
+import { SpaceService } from "../old/space.service";
 import { SpaceModel } from "../models/space.model";
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { EquipmentTypeModel } from "../models/equipmentType.model";
 import { ServiceTypeModel } from "../models/serviceType.model";
-import { ReservationService } from "../reservation.service";
+import { ReservationService } from "../old/reservation.service";
 import { EquipmentOrderModel } from "../models/equipmentOrder.model";
 import { ServiceOrderModel } from "../models/serviceOrder.model";
-import { InvoiceService } from "../invoice.service";
+import { InvoiceService } from "../old/invoice.service";
 
 
 @Component({

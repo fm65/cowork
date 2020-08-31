@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
-import { UserService } from "../user.service";
+import { UserService } from "../old/user.service";
 import { UserModel } from "../models/user.model";
 import { Subscription } from 'rxjs';
-import { ReservationService } from "../reservation.service";
+import { ReservationService } from "../old/reservation.service";
 import { ReservationModel } from "../models/reservation.model";
 import * as moment from 'moment';
 

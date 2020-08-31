@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { MakeReservationModel } from "./models/makeReservationModel";
-import { environment } from "../environments/environment";
+import { MakeReservationModel } from "../models/makeReservationModel";
+import { environment } from "../../environments/environment";
 import { HttpClient } from '@angular/common/http';
-import { ReservationModel } from "./models/reservation.model";
+import { ReservationModel } from "../models/reservation.model";
 
 @Injectable({
     providedIn: 'root'

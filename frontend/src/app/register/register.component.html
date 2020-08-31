@@ -36,8 +36,10 @@
                     <option [value]="null" selected>Sélectionner un batiment</option>
                     <option *ngFor="let building of buildings | async" [value]="building.id">{{building.name}}</option>
                 </select>
-                <div *ngIf="buildingCtrl.dirty && buildingCtrl.hasError('required')" id="building-warning"><strong>
+                <!--
+                <div *ngIf="buildingCtrl.hasError('valueNotSelected')" id="building-warning"><strong>
                     Veuillez sélectionner un batiment</strong></div>
+                -->
             </div>
             <div class="form-group">
                 <label for="building-filter">Abonnement</label>
@@ -45,9 +47,11 @@
                     <option [value]="null" selected>Sélectionner un abonnement</option>
                     <option *ngFor="let sub of subscriptions | async" [value]="sub.id">{{sub.name}}</option>
                 </select>
-                <div *ngIf="subscriptionCtrl.dirty && subscriptionCtrl.hasError('required')" id="sub-warning"><strong>
-                    Veuillez sélectionner un abonnement</strong></div>
+                <!--
+                <div *ngIf="subscriptionCtrl.hasError('valueNotSelected')" id="sub-warning"><strong>
+                    Veuillez sélectionner un abonnement</strong></div>-->
             </div>
+
 
 
             <div formGroupName="passwordForm">

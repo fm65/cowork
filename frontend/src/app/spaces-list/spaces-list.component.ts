@@ -1,14 +1,14 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { concat, Observable } from 'rxjs';
-import { SpaceService } from "../space.service";
+import { SpaceService } from "../old/space.service";
 import { SpaceModel } from "../models/space.model";
-import { ImageService } from "../image.service";
+import { ImageService } from "../old/image.service";
 import { LabelType } from "ng5-slider";
 import { debounceTime, filter, switchMap, tap } from 'rxjs/operators';
-import { CityService } from "../city.service";
+import { CityService } from "../old/city.service";
 import { startWith } from 'rxjs/internal/operators/startWith';
 import { BuildingModel } from "../models/building.model";
-import { BuildingService } from "../building.service";
+import { BuildingService } from "../old/building.service";
 
 @Component({
     selector: 'cow-spaces-list',
