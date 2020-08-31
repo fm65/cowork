@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ReservationModel } from "../models/reservation.model";
+import { ReservationModel } from '../models/reservation.model';
 import { Subscription } from 'rxjs';
-import { ReservationService } from "../reservation.service";
+import { ReservationService } from '../reservation.service';
 import * as moment from 'moment';
-import { InvoiceService } from "../invoice.service";
+import { InvoiceService } from '../invoice.service';
 
 @Component({
     selector: 'cow-invoice',

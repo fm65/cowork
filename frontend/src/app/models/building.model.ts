@@ -4,4 +4,6 @@ export interface BuildingModel {
     scheduleMonThu: string;
     scheduleFri: string;
     scheduleWeekend: string;
+    createdAt: Date;
+    updatedAt: Date;
 }

@@ -30,18 +30,18 @@
                 <div *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')" id="login-warning"><strong>L'email est
                     obligatoire </strong></div>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="building-filter">Batiment</label>
-                <select class="form-control" id="building-filter" name="space-type">
-                    <option [value]="null" selected>Tous</option>
+                <select class="form-control" id="building-filter" formControlName="buildingId">
+                    <option [value]="null" selected>Sélectionner un batiment</option>
                     <option *ngFor="let building of buildings | async" [value]="building.id">{{building.name}}</option>
                 </select>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="building-filter">Abonnement</label>
-                <select class="form-control" id="subscription-filter" name="space-type">
-                    <option [value]="null" selected>Tous</option>
-
+                <select class="form-control" id="subscription-filter" formControlName="subscriptionId">
+                    <option [value]="null" selected>Sélectionner un abonnement</option>
+                    <option *ngFor="let sub of subscriptions | async" [value]="sub.id">{{sub.name}}</option>
                 </select>
             </div>
 

@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {BuildingModel} from '../models/building.model';
+import {catchError, tap} from 'rxjs/operators';
 
 const baseUrl = 'http://localhost:3000/api/buildings';
+
+const httpOptions = {
+    headers: new HttpHeaders({ 'Access-Control-Allow-Origin': '*' })
+};
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +17,9 @@ export class BuildingService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<Array<BuildingModel>>(baseUrl);
+        const res = this.http.get<Array<BuildingModel>>(baseUrl);
+        console.log(res);
+        return res;
     }
 
     getById(id) {

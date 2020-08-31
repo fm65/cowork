@@ -7,14 +7,14 @@ module.exports = function(app) {
 
     app.post("/api/auth/signup", async (req, res) => {
         if (req.body.email && req.body.password && req.body.firstName && req.body.lastName
-            && req.body.buildingName && req.body.subscriptionId) {
+            && req.body.buildingId && req.body.subscriptionId) {
             try {
                 const user = await authController.signup(req.body.email, req.body.password, req.body.firstName, req.body.lastName,
-                    req.body.buildingName, req.body.subscriptionId);
+                    req.body.buildingId, req.body.subscriptionId);
                 res.status(201).json(user);
             }
             catch (err) {
-                res.status(409).json({status: "error", message: "user already exist"}).end();  // Error conflict
+                res.status(409).json(err.toString());  // Error conflict
             }
         } else {
             res.status(400).end();

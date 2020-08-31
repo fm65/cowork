@@ -62,7 +62,7 @@ export class InvoiceService {
 
         return day2.diff(day1, 'days') + adjust;
     }
-
+/*
     invoicePDFName(reservation: ReservationModel) {
         return `invoice-${reservation.id}-${reservation.user.lastName}-${moment(reservation.orderDate).format("YYYY-MM-DD")}.pdf`;
     }
@@ -123,4 +123,6 @@ export class InvoiceService {
 
         return locationPriceHTVA + servicePriceHTVA + equipmentPriceHTVA;
     }
+
+ */
 }
