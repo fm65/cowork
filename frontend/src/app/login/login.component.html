@@ -5,7 +5,7 @@
         <div class="alert alert-danger" *ngIf="authenticationFailed">
             <button type="button" class="close" aria-label="Close" (click)="authenticationFailed = false"><span
                 aria-hidden="true">&#215;</span></button>
-            Erreur d'authentification.
+            L'email ou le mot de passe est incorrect.
         </div>
 
         <form (ngSubmit)="authenticate()" #loginForm="ngForm">
@@ -23,12 +23,6 @@
                        [(ngModel)]="credentials.password" required #passwordCtrl="ngModel">
                 <div *ngIf="passwordCtrl.control.dirty && passwordCtrl.control.hasError('required')"><strong>Le mot de
                     passe est obligatoire</strong></div>
-            </div>
-
-            <div class="form-check">
-                <input id="rememberMe" class="form-check-input" type="checkbox" name="rememberMe"
-                       [(ngModel)]="credentials.rememberMe" #rememberMeCtrl="ngModel">
-                <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
             </div>
 
             <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">Se connecter!</button>

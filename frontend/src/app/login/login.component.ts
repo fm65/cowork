@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../user.service";
 import { ActivatedRoute, Router } from "@angular/router";
+import {AuthService} from '../services/auth.service';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
     selector: 'cow-login',
@@ -11,23 +13,34 @@ export class LoginComponent implements OnInit {
 
     returnUrl: string;
 
+    loginCtrl: FormControl;
+    passwordCtrl: FormControl;
+
     credentials = {
         login: '',
-        password: '',
-        rememberMe: false
+        password: ''
     };
     authenticationFailed = false;
 
-    constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {
+
+    constructor(private fb: FormBuilder, private authService: AuthService,
+                private router: Router, private route: ActivatedRoute) {
     }
 
     ngOnInit() {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
         console.log(this.returnUrl);
+
+        this.loginCtrl = this.fb.control('', Validators.required);
+        this.passwordCtrl = this.fb.control('', Validators.required);
+
+        this.credentials.login = this.loginCtrl.value;
+        this.credentials.password = this.passwordCtrl.value;
+
     }
 
     authenticate() {
-        this.userService.authenticate(this.credentials.login, this.credentials.password, this.credentials.rememberMe).subscribe(
+        this.authService.login(this.credentials).subscribe(
             success => this.router.navigateByUrl(this.returnUrl),
             error => this.authenticationFailed = true
         );
