@@ -1,4 +1,4 @@
-import { ServiceTypeModel } from "./serviceType.model";
+import { ServiceTypeModel } from './serviceType.model';
 
 export interface ServiceOrderModel {
     quantity: number;

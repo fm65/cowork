@@ -1,8 +1,10 @@
-export interface UserModel
-{
-    id : number,
-    firstName: string,
-    lastName: string,
-    email : string,
-    Password : string;
+export interface UserModel {
+    id: number;
+    email: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    isAdmin: boolean;
+    registrationDate: Date;
+    subscriptionDate: Date;
 }
