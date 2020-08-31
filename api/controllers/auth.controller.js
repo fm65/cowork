@@ -8,13 +8,15 @@ const SecurityUtils = require('../utils').securityUtils;
 
 module.exports = {
 
-    signup: async (email, password, firstName, lastName, buildingName) => {
+    signup: async (email, password, firstName, lastName, buildingName, subscriptionId) => {
         const user = await User.findOne({
             attributes: ['email'],
             where: {email: email}
         });
         const building = await BuildingController.getABuilding(buildingName);
-        const subscription = await SubscriptionController.getASubscription(1);
+        const subscription = await SubscriptionController.getASubscription(subscriptionId);
+        var subscriptionDate = null;
+        if (subscriptionId == 2 || subscriptionId == 3) {subscriptionDate = Date.now(); }
         if (!user) {
             const newUser = await User.create({
                 email: email,
@@ -22,7 +24,8 @@ module.exports = {
                 firstName: firstName,
                 lastName: lastName,
                 isAdmin: false,
-                registrationDate: Date.now()
+                registrationDate: Date.now(),
+                subscriptionDate
             });
             newUser.setBuilding(building);
             newUser.setSubscription(subscription);
