@@ -4,10 +4,48 @@ const authMiddleware = require('../middlewares').authMiddleware;
 
 module.exports = function(app) {
 
-    app.get("/api/users", (req, res) => {
-        userController.allUsers();
-        res.status(204).end();
+    // Get all users
+    app.get("/api/users", async (req, res) => {
+        const users = await userController.allUsers();
+        res.status(200).json(users);
+    });
 
+    // Get user with email
+    app.get('/api/users', async (req, res) => {
+        if (req.body.email) {
+            try {
+                const user = await userController.getUserWithEmail(req.body.email);
+                if (user) {
+                    res.status(201).json(user);
+                } else {
+                    res.status(401).end();  // Unautorized
+                }
+            }
+            catch (err) {
+                res.status(500).end();      // Server crashed
+            }
+        } else {
+            res.status(400).end();
+        }
+    });
+
+    // Get user with id
+    app.get('/api/users/:id', async (req, res) => {
+        if (req.params) {
+            try {
+                const user = await userController.getUserWithId(req.params.id);
+                if (user) {
+                    res.status(201).json(user);
+                } else {
+                    res.status(401).end();  // Unautorized
+                }
+            }
+            catch (err) {
+                res.status(500).end();      // Server crashed
+            }
+        } else {
+            res.status(400).end();
+        }
     });
 
 }

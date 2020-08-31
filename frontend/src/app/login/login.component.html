@@ -5,7 +5,7 @@
         <div class="alert alert-danger" *ngIf="authenticationFailed">
             <button type="button" class="close" aria-label="Close" (click)="authenticationFailed = false"><span
                 aria-hidden="true">&#215;</span></button>
-            Nope, try again.
+            Erreur d'authentification.
         </div>
 
         <form (ngSubmit)="authenticate()" #loginForm="ngForm">

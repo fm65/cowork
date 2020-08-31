@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from "@angular/router";
-import { UserService } from "../user.service";
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
+import { BuildingService} from '../services/building.service';
+import { BuildingModel} from '../models/building.model';
+import { AuthService } from '../services/auth.service';
+import { SubscriptionService} from '../services/subscription.service';
+import {Observable} from 'rxjs';
+import {SubscriptionModel} from '../models/subscription.model';
 
 @Component({
     selector: 'cow-register',
@@ -18,11 +24,16 @@ export class RegisterComponent implements OnInit {
     passwordTestCtrl: FormControl;
     firstNameCtrl: FormControl;
     lastNameCtrl: FormControl;
-    rememberMeCtrl: FormControl;
+    buildingCtrl: FormControl;
+    subscriptionCtrl: FormControl;
     userForm: FormGroup;
     passwordForm: FormGroup;
 
-    constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private route: ActivatedRoute) {
+    buildings: Observable<Array<BuildingModel>>;
+    subscriptions: Observable<Array<SubscriptionModel>>;
+
+    constructor(private fb: FormBuilder, private authService: AuthService, private buildingService: BuildingService,
+                private subscriptionService: SubscriptionService, private router: Router, private route: ActivatedRoute) {
     }
 
     static passwordMatch(control: FormGroup) {
@@ -33,6 +44,9 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+        this.buildings = this.buildingService.getAll();
+        this.subscriptions = this.subscriptionService.getAll();
 
         this.loginCtrl = this.fb.control('', Validators.required);
         this.firstNameCtrl = this.fb.control('', Validators.required);
@@ -57,20 +71,22 @@ export class RegisterComponent implements OnInit {
                 passwordForm: this.passwordForm,
                 firstName: this.firstNameCtrl,
                 lastName: this.lastNameCtrl,
-                rememberMe: this.rememberMeCtrl
+                buildingId: this.buildingCtrl,
+                subscriptionId: this.subscriptionCtrl
             });
     }
 
     register() {
-        this.userService.register(
-            this.userForm.value.firstName,
-            this.userForm.value.lastName,
+        this.authService.register(
             this.userForm.value.login,
             this.userForm.value.passwordForm.password,
-            this.userForm.value.rememberMe
+            this.userForm.value.firstName,
+            this.userForm.value.lastName,
+            parseInt(this.userForm.value.buildingId, 10),
+            parseInt(this.userForm.value.subscriptionId, 10)
         ).subscribe(
             () => this.router.navigateByUrl(this.returnUrl),
-            () => this.registrationFailed = true,
+            () => this.registrationFailed = true
         );
     }
 
