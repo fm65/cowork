@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from "@angular/router";
-import { UserService } from "../user.service";
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
+import { BuildingService} from '../services/building.service';
+import { BuildingModel} from '../models/building.model';
+import { AuthService } from '../services/auth.service';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'cow-register',
@@ -18,11 +22,13 @@ export class RegisterComponent implements OnInit {
     passwordTestCtrl: FormControl;
     firstNameCtrl: FormControl;
     lastNameCtrl: FormControl;
-    rememberMeCtrl: FormControl;
     userForm: FormGroup;
     passwordForm: FormGroup;
 
-    constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private route: ActivatedRoute) {
+    buildings: Observable<Array<BuildingModel>>;
+
+    constructor(private fb: FormBuilder, private authService: AuthService, private buildingService: BuildingService,
+                private router: Router, private route: ActivatedRoute) {
     }
 
     static passwordMatch(control: FormGroup) {
@@ -56,18 +62,21 @@ export class RegisterComponent implements OnInit {
                 login: this.loginCtrl,
                 passwordForm: this.passwordForm,
                 firstName: this.firstNameCtrl,
-                lastName: this.lastNameCtrl,
-                rememberMe: this.rememberMeCtrl
+                lastName: this.lastNameCtrl
             });
+
+        this.buildings = this.buildingService.getAll();
+        console.log(this.buildings);
     }
 
     register() {
-        this.userService.register(
+        this.authService.register(
             this.userForm.value.firstName,
             this.userForm.value.lastName,
             this.userForm.value.login,
             this.userForm.value.passwordForm.password,
-            this.userForm.value.rememberMe
+            null,
+            null
         ).subscribe(
             () => this.router.navigateByUrl(this.returnUrl),
             () => this.registrationFailed = true,

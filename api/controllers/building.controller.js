@@ -8,6 +8,14 @@ class BuildingController {
         return Building.findAll();
     }
 
+    static async getABuildingById(id) {
+        return await Building.findOne({
+            where: {
+                id
+            }
+        });
+    }
+
     static async getABuilding(name) {
         return await Building.findOne({
             where: {

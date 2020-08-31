@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const API_URL = 'http://localhost:3000/api/';
@@ -14,5 +14,7 @@ export class UserService {
     getAllUsers(): Observable<any> {
         return this.http.get(API_URL + 'users', { responseType: 'text' });
     }
+
+
 
 }
